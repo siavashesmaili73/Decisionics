@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    android:background="@color/WhiteSmoke"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/aa"
+        ></ImageView>
+
+    <LinearLayout
+        android:id="@+id/layout_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eeeeee"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="@string/scan_setting"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/setting_name"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/et_mac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/setting_mac"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/et_uuid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/setting_uuid"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="13sp" />
+
+        <Switch
+            android:id="@+id/sw_auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="AutoConnect ?"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#eeeeee"
+        android:visibility="gone"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@+id/alignment"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:text="@string/start_scan" />
+
+        <Button
+            android:id="@+id/alignment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:text="@string/alignment" />
+
+        <Button
+            android:id="@+id/spatiotemporal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toEndOf="@id/siavash"
+            android:text="@string/spatiotemporal"
+            android:textSize="12sp"
+            tools:ignore="NotSibling" />
+
+        <Button
+            android:id="@+id/store_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toEndOf="@id/spatiotemporal"
+            android:text="@string/store_data_start"
+            android:textSize="12sp"
+            tools:ignore="NotSibling" />
+
+
+        <ImageView
+            android:id="@+id/img_loading"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_loading"
+            android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/linechart2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+     <TextView
+        android:id="@+id/siavash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/siavash_3_3f"
+         android:visibility="gone"
+         android:textColor="@color/DarkGray"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/siavash1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/siavash_3_3f"
+        android:visibility="gone"
+        android:textColor="@color/DarkGray"
+        tools:ignore="HardcodedText" />
+
+    <ListView
+        android:id="@+id/list_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:scrollbars="none" />
+
+
+</LinearLayout>
+

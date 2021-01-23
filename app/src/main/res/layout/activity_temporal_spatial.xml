@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".temporal_spatial">
+
+
+    <TextView
+        android:id="@+id/accelx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/accelx_3_3f"
+        android:textColor="@color/DarkGray"
+        tools:ignore="HardcodedText" />
+    <TextView
+        android:id="@+id/accely"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/accelx_3_3f"
+        android:textColor="@color/DarkGray"
+        tools:ignore="HardcodedText" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/accelx">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/linechart_accx"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/linechart_accy"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/linechart_accz"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/linechart_gyrox"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/linechart_gyroy"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/linechart_gyroz"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/linechart_pressh"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/linechart_presst"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

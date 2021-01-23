@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.imu">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.things.permission.MANAGE_SENSOR_DRIVERS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/aa"
+        android:label="Imu"
+        android:roundIcon="@drawable/aa"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ble.processing"></activity>
+        <activity
+            android:name=".temporal_spatial"
+            android:parentActivityName=".ble.BleMainActivity"
+            android:screenOrientation="portrait"/>
+
+        <service android:name="com.mbientlab.metawear.android.BtleService" />
+
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/SplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ble.BleMainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ble.operation.OperationActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
